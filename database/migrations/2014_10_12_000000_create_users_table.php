@@ -11,13 +11,13 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up()    // テーブルを生成するときに実行される
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->increments('id');           // 自動で割り振られる番号
+            $table->string('name');             // ユーザー名
+            $table->string('email')->unique();  // メールアドレス
+            $table->string('password');         // ログインパスワード
             $table->rememberToken();
             $table->timestamps();
         });
@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down()  // 生成を戻すときに実行される
     {
         Schema::dropIfExists('users');
     }
