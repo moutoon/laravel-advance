@@ -14,6 +14,8 @@ return [
     */
 
     'default' => env('DB_CONNECTION', 'mysql'),
+        // 'DB_CONNECTION'を呼び出す
+        // 'DB_CONNECTION'が定義されていなかったら'mysql'を呼び出す
 
     /*
     |--------------------------------------------------------------------------
