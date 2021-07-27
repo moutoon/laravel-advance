@@ -11,6 +11,7 @@
 |
 */
 
+// rootにGET -> View welcome.blade.php を表示
 Route::get('/', function () {
     return view('welcome');
 });
