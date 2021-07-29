@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+    // 名前空間：クラスが重複しないようにしている
 
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
+    // RegisterController内で使いたいクラスの名前空間を指定
+    
 class RegisterController extends Controller
 {
     /*
@@ -21,13 +23,17 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
-
+    // トレイト
+    // showRegistrationFormアクションとregisterアクションを
+    // クラス内に存在するアクションとして実行している。
+    
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
+    // リダイレクト先を指定
 
     /**
      * Create a new controller instance.
@@ -37,7 +43,9 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        // ミドルウェア：処理がコントローラに渡る前に確認される条件
     }
+
 
     /**
      * Get a validator for an incoming registration request.
