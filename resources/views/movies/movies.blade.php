@@ -29,8 +29,8 @@
                     </p>
                     
                     @if(Auth::id() == $movie->user_id)
-                        {!! Form::open(['route' => ['movies.destroy', $Movie->], 'method' => 'delete']) !!}
-                            {!! Form::submit('この動画を削除する？' ,['class' => 'button btn btn-danger]) !!}
+                        {!! Form::open(['route' => ['movies.destroy', $Movie->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('この動画を削除する？' ,['class' => "button btn btn-danger"]) !!}
                         {!! Form::close() !!}
                         @endif
                     
