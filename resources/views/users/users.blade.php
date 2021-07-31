@@ -22,7 +22,7 @@
 
                 <div class="movie text-left d-inline-block">
 
-                    ＠{{ $user->name }}
+                    ＠{!! link_to_route('users.show',$user->name,['id'=>$user->id]) !!}
 
                     <div>
                         @if($movie)
