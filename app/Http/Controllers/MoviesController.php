@@ -23,6 +23,8 @@ class MoviesController extends Controller
     
     public function store(Request $request)
     {
+        dd($request);
+        
         $this->validate($request, [
             'url' => 'required|max:11',
             'comment' => 'max:36',
