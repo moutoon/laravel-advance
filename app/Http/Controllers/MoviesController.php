@@ -18,7 +18,7 @@ class MoviesController extends Controller
             'movies' => $movies,
         ];
         
-        return views('movies.create', $data);
+        return view('movies.create', $data);
     }
     
     public function store(Request $request)
